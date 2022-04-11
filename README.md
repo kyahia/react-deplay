@@ -1,3 +1,32 @@
+# instructions
+## GIT
+git init
+git add .
+git commit -m "v:1.0"
+git remote add origin SSH
+git remote -v
+git push -u origin master
+
+## GITHUB
+on package.json : "homepage": "https://myusername.github.io/my-app",
+
+npm install --save gh-pages
+
+on package.json: 
+  "scripts": {
++   "predeploy": "npm run build",
++   "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+  "scripts": {
+    "predeploy": "npm run build",
+-   "deploy": "gh-pages -d build",
++   "deploy": "gh-pages -b master -d build",
+
+npm run deploy
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
